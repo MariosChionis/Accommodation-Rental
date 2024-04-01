@@ -16,9 +16,12 @@ void openServer(){
     
     try {
         initialSocket = new ServerSocket(port); // Initializing the server 
+        System.out.println("Server is listening to the port: "+ port);
+
 
         while(true){
             connection = initialSocket.accept(); // Accepting client/server communication
+            System.out.println("New Client Connected");
 
             Thread t = new ActionHandler(connection); // Creating a thread for each client's request/action
 
