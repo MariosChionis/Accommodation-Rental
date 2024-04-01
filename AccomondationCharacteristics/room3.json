@@ -1,0 +1,10 @@
+{
+    "roomName": "room3",
+    "area": "Area1",
+    "noOfPersons": 5,
+    "date": "mm/dd/yyyy-mm/dd/yyyy",
+    "price":1800,
+    "stars": 3,
+    "roomImage": "/usr/bin/images/roomName.png",
+    "noOfReviews": 15
+}
