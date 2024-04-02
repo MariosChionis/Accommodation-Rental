@@ -4,21 +4,22 @@ import java.util.Date;
 
 public class Accommodation implements Serializable {
     private String name;
-    private String location;
     private int capacity; // Number of guests it can accommodate
+    private String location;
     private ArrayList<Date> availableDates;
     private double pricePerNight;
     private float rating; // Average rating from reviews, range 1-5
+    private int reviews;
     private String imagePath; // Path to the accommodation image
 
     // Constructor
-    public Accommodation(String name, String location, int capacity, ArrayList<Date> availableDates, double pricePerNight, float rating, String imagePath) {
+    public Accommodation(String name, String location, int capacity, double pricePerNight, float rating,int reviews, String imagePath) {
         this.name = name;
         this.location = location;
         this.capacity = capacity;
-        this.availableDates = availableDates;
         this.pricePerNight = pricePerNight;
         this.rating = rating;
+        this.reviews=reviews;
         this.imagePath = imagePath;
     }
 
@@ -73,6 +74,14 @@ public class Accommodation implements Serializable {
 
     public String getImagePath() {
         return imagePath;
+    }
+
+    public void setReviews(int reviews) {
+        this.reviews = reviews;
+    }
+
+    public int getReviews() {
+        return reviews;
     }
 
     public void setImagePath(String imagePath) {
